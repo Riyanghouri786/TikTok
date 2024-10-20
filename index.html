@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TikTok Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        max-width: 400px; /* Adjust max width as needed */
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      select {
+        appearance: none; /* Remove default dropdown arrow */
+        background: white
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="gray" d="M3 4l3 3 3-3z"/></svg>')
+          no-repeat right 10px center;
+        background-size: 12px;
+        cursor: pointer;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TikTok Services</h1>
+    <form name="submit-to-google-sheet">
+      <!-- Number input -->
+      <input
+        id="number"
+        name="recived"
+        type="text"
+        placeholder="Money"
+        required
+      />
+
+      <!-- Services dropdown -->
+      <select id="services" name="services" required>
+        <option value="" disabled selected>Select Service</option>
+        <option value="Account">Account</option>
+        <option value="Follower">Follower</option>
+        <option value="Like">Like</option>
+        <option value="View">View</option>
+        <option value="Share">Share</option>
+      </select>
+
+      <!-- Amount input -->
+      <input
+        id="amount"
+        name="amount"
+        type="text"
+        placeholder="Amount"
+        required
+      />
+      <input id="link" type="text" name="link" placeholder="Link" required />
+
+      <!-- Message input -->
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Message"
+        rows="4"
+      ></textarea>
+
+      <!-- Submit button -->
+      <button type="submit">Send</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
